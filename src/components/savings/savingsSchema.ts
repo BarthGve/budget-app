@@ -3,7 +3,8 @@ import { z } from "zod";
 export const savingsContributionSchema = z.object({
   account_type_id: z
     .string()
-    .uuid({ message: "Le type de compte est requis." }),
+    .uuid({ message: "Le type de compte est requis." })
+    .nullable(), // Ajout de .nullable()
   enseigne_id: z
     .string()
     .uuid({ message: "Veuillez sélectionner un établissement." })

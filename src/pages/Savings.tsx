@@ -132,7 +132,6 @@ function Savings() {
     savingsContributionForm.reset({
       ...contribution,
       start_date: new Date(contribution.start_date),
-      domain: contribution.domain ?? undefined,
       logo_url: contribution.logo_url ?? undefined,
       beneficiary_id: contribution.beneficiary_id ?? undefined,
     });

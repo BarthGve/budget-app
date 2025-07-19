@@ -155,9 +155,10 @@ export function SavingsContributionListItem({
                   </p>
                 </HoverCardContent>
               </HoverCard>
-              {contribution.account_types?.name && (
+              {/* Affichage de l'enseigne en gris clair */}
+              {contribution.enseignes?.name && (
                 <span className="text-xs text-muted-foreground">
-                  {contribution.account_types.name}
+                  {contribution.enseignes.name}
                 </span>
               )}
             </div>

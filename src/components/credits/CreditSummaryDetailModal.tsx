@@ -166,9 +166,9 @@ export function CreditSummaryDetailModal({
                   <div key={credit.id} className="border rounded-md p-4">
                     <div className="flex items-center justify-between mb-2">
                       <div className="flex items-center gap-2">
-                        {credit.logo_url && (
+                        {(credit.enseignes?.external_logo_url || credit.enseignes?.icon_path) && (
                           <img
-                            src={credit.logo_url}
+                            src={credit.enseignes?.external_logo_url || credit.enseignes?.icon_path || ''}
                             alt={`${credit.loan_name} logo`}
                             className="h-6 w-6 object-contain"
                           />

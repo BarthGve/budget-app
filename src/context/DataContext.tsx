@@ -278,7 +278,7 @@ export const DataProvider = ({ children }: { children: React.ReactNode }) => {
           let query = supabase
             .from("savings_contributions")
             .select(
-              "*, creator_profile:user_id(first_name, last_name, avatar_url), account_types(*)"
+              "*, creator_profile:user_id(first_name, last_name, avatar_url), account_types(*), enseignes(*)"
             )
             .order("created_at", { ascending: false });
           if (collaboratorIds.length > 0) {

@@ -52,6 +52,8 @@ import { savingsContributionSchema } from "./savingsSchema";
 
 type SavingsContributionFormValues = z.infer<typeof savingsContributionSchema>;
 
+import { SupabaseClient } from "@supabase/supabase-js"; // Ajout de l'import
+
 interface GamifiedSavingsFormProps {
   form: UseFormReturn<SavingsContributionFormValues>;
   onSubmit: (values: SavingsContributionFormValues) => void;
@@ -62,6 +64,7 @@ interface GamifiedSavingsFormProps {
   }[];
   editingContribution: SavingsContribution | null;
   canShare: boolean;
+  supabase: SupabaseClient; // Ajouté
 }
 
 const steps = ["Identification", "Conditions", "Partage"];

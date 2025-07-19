@@ -748,27 +748,29 @@ export function CreditForm({
                       control={form.control}
                       name="is_shared"
                       render={({ field }) => (
-                        <Card className="border-gray-200">
-                          <CardContent className="flex flex-row items-start justify-between p-4">
-                            <div className="space-y-1 flex-1">
-                              <div className="text-sm font-medium text-gray-900 flex items-center gap-2">
-                                <div className="w-6 h-6 bg-purple-100 rounded-lg flex items-center justify-center">
-                                  <Share2 className="h-3 w-3 text-purple-600" />
+                        <FormItem>
+                          <Card className="border-gray-200">
+                            <CardContent className="flex flex-row items-start justify-between p-4">
+                              <div className="space-y-1 flex-1">
+                                <div className="text-sm font-medium text-gray-900 flex items-center gap-2">
+                                  <div className="w-6 h-6 bg-purple-100 rounded-lg flex items-center justify-center">
+                                    <Share2 className="h-3 w-3 text-purple-600" />
+                                  </div>
+                                  Partager ce crédit
                                 </div>
-                                Partager ce crédit
+                                <p className="text-sm text-gray-600">
+                                  Rendre ce crédit visible par vos collaborateurs
+                                </p>
                               </div>
-                              <p className="text-sm text-gray-600">
-                                Rendre ce crédit visible par vos collaborateurs
-                              </p>
-                            </div>
-                            <FormControl>
-                              <Switch
-                                checked={field.value ?? false}
-                                onCheckedChange={field.onChange}
-                              />
-                            </FormControl>
-                          </CardContent>
-                        </Card>
+                              <FormControl>
+                                <Switch
+                                  checked={field.value ?? false}
+                                  onCheckedChange={field.onChange}
+                                />
+                              </FormControl>
+                            </CardContent>
+                          </Card>
+                        </FormItem>
                       )}
                     />
                   )}

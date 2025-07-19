@@ -15,6 +15,9 @@ export interface Credit {
   loan_name: string;
   enseigne_id?: string | null; // Nouvelle colonne
   enseignes?: IEnseigne; // Relation jointe
+  organization_name?: string | null; // Ajouté
+  external_logo_url?: string | null; // Ajouté
+  icon_path?: string | null; // Ajouté
   profiles: {
     first_name: string;
     last_name: string;
@@ -148,6 +151,7 @@ export interface SavingsContribution {
   beneficiary_id?: string | null;
   account_type_id?: string | null; // Ajout du champ account_type_id
   enseigne_id?: string | null; // Ajout du champ enseigne_id
+  enseignes?: IEnseigne; // Ajouté
   is_shared?: boolean; // Derived property
   user_amount?: number; // Derived property
   creator_profile: Profile;
