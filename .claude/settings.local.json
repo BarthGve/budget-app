@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__supabase__list_tables",
+      "Bash(npm run build:*)",
+      "mcp__supabase__apply_migration",
+      "mcp__supabase__list_branches",
+      "mcp__supabase__create_branch",
+      "mcp__supabase__generate_typescript_types"
+    ]
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "supabase"
+  ]
+}
